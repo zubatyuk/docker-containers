@@ -27,7 +27,7 @@ RUN    cd / \
     && git clone https://bitbucket.org/sage2/sage2.git \
     && cd sage2/keys \
     && ./GO-linux \
-    && cd ..
+    && cd .. \
     && npm run in
 
 EXPOSE  9090 9292
