@@ -16,6 +16,4 @@ RUN apt-get update \
           xinput xserver-xorg-input-kbd xfonts-cyrillic x11-utils xbitmaps xserver-xorg \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
-RUN    useradd -m -U ubuntu \
-    && echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
-
+RUN echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
