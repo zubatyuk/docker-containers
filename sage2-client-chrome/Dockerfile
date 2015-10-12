@@ -11,5 +11,7 @@ RUN    apt-key add /root/linux_signing_key.pub && rm /root/linux_signing_key.pub
        google-chrome-stable \ 
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* 
 
-USER ubuntu
-CMD  google-chrome
+RUN useradd -m -U chrome
+USER chrome
+
+CMD google-chrome
