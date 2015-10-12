@@ -6,8 +6,7 @@ COPY   build-ffmpeg.sh build-imagemagic.sh /root/BUILD/
 
 RUN    apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    &&   software-properties-common curl \
-    && apt-get update \
+         software-properties-common curl \
     && apt-add-repository -y ppa:mc3man/trusty-media
 
 RUN    curl https://deb.nodesource.com/setup_0.12 | bash -
