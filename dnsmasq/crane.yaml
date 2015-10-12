@@ -1,3 +1,9 @@
 containers:
     dnsmasq:
-        
+        build:
+            context: image
+        image: zubatyuk/dnsmasq
+        run:
+            publish: ["53:53", "63:63/udp"]
+            volume: ["dnsmasq.d:/etc/dnsmasq.d"]
+            restart: always
