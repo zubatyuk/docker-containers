@@ -1,7 +1,6 @@
 containers:
     apt-cacher-ng:
-        build:
-            context: image
+        context: image
         image: zubatyuk/apt-cacher-ng
         run:
             publish: ["3142:3142"]
