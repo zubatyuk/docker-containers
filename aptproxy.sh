@@ -10,6 +10,6 @@ fi
 
 nc -z $APTPROXY $PORT
 if [  $? -eq 0 ]; then
-    echo "Acquire::http::proxy \"http://${APTPROXY}:${PORT}\";" > /etc/apt/apt.conf.d/02proxy
-    echo "Acquire::https::proxy \"DIRECT\";" >> /etc/apt/apt.conf.d/02proxy
+    echo "Acquire::http::proxy \"http://${APTPROXY}:${PORT}\";" > /etc/apt/apt.conf.d/50squid-deb-proxy
+    echo "Acquire::https::proxy \"DIRECT\";" >> /etc/apt/apt.conf.d/50squid-deb-proxy
 fi
