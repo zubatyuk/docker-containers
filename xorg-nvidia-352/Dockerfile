@@ -19,6 +19,3 @@ RUN apt-get update \
 RUN    useradd -m -U ubuntu \
     && echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
 
-USER   ubuntu
-
-CMD startx
