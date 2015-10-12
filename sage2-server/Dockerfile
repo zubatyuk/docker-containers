@@ -1,4 +1,4 @@
-FROM zubatyuk/xorg-nvidia-352
+FROM ubuntu:trusty
 MAINTAINER Roman Zubatyuk <zubatyuk@gmail.com> 
 
 RUN    mkdir /root/BUILD
