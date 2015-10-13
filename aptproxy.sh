@@ -4,7 +4,7 @@ APTPROXY=aptproxy
 PORT=3142
 
 if [ "$1" == "clean" ]; then
-    rm /etc/apt/apt.conf.d/02proxy
+    rm /etc/apt/apt.conf.d/50squid-deb-proxy
     exit 0
 fi
 
