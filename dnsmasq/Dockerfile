@@ -10,4 +10,4 @@ RUN    echo "addn-hosts=/etc/althosts" > /etc/dnsmasq.conf \
     && echo "conf-dir=/etc/dnsmasq.d" >> /etc/dnsmasq.conf \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
-CMD /usr/sbin/dnsmasq -d -z
+CMD /usr/sbin/dnsmasq -d 
