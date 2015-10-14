@@ -8,6 +8,7 @@ RUN apt-get update \
 RUN    echo "addn-hosts=/etc/althosts" > /etc/dnsmasq.conf \
     && echo "user=root" >> /etc/dnsmasq.conf \
     && echo "conf-dir=/etc/dnsmasq.d" >> /etc/dnsmasq.conf \
+    && echo "bind-dynamic" >> /etc/dnsmasq.conf \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 CMD /usr/sbin/dnsmasq -d -z
