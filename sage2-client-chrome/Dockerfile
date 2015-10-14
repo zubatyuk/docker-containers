@@ -8,7 +8,7 @@ RUN    apt-key add /root/linux_signing_key.pub && rm /root/linux_signing_key.pub
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
          xdg-utils hicolor-icon-theme  \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-       google-chrome-stable \
+       google-chrome-stable libexif12\
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* 
 
 RUN useradd -m -U chrome
